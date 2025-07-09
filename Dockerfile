@@ -7,6 +7,6 @@ RUN apt-get update && apt-get install -y \
 
 RUN useradd -m -s /bin/bash smallcat && echo "smallcat ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
-# default user
+# Default user
 USER smallcat
 WORKDIR /home/smallcat
