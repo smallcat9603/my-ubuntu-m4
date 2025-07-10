@@ -1,5 +1,5 @@
 # my-ubuntu-m4
-This repository contains the necessary files to automatically build and deploy the Docker image `my-ubuntu-m4` to Docker Hub.
+This repository contains the necessary files to automatically build and deploy the Docker image `my-ubuntu-m4` to Docker Hub (by Github Actions).
 Any change in files Dockerfile and .github/workflows/docker-image.yml will be automatically reflected in `my-ubuntu-m4` in Docker Hub.
 
 ## Files
