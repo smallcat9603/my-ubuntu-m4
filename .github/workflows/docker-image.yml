@@ -4,6 +4,10 @@ on:
   push:
     branches: 
       - main
+    paths:
+      - 'Dockerfile'
+      - '.github/workflows/docker-image.yml'
+
 jobs:
   build:
     runs-on: ubuntu-latest
