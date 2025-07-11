@@ -20,10 +20,16 @@ RUN apt-get update && apt-get install -y \
     npm \
     openjdk-17-jdk \
     build-essential \
+    openmpi-bin \
+    libopenmpi-dev \
     && rm -rf /var/lib/apt/lists/*
 
 RUN useradd -m -s /bin/bash smallcat && echo "smallcat ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
-# Default user
 USER smallcat
 WORKDIR /home/smallcat
+
+# test
+COPY mpi-hello.c .
+RUN mpicc mpi-hello.c -o mpi-hello
+CMD ["mpirun", "-np", "2", "./mpi-hello"]
