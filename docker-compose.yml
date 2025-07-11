@@ -1,0 +1,20 @@
+services:
+  app1:
+    image: smallcat/my-ubuntu-m4:latest
+    container_name: app1
+    stdin_open: true
+    tty: true
+    networks:
+      - appnet
+
+  app2:
+    image: smallcat/my-ubuntu-m4:latest
+    container_name: app2
+    stdin_open: true
+    tty: true
+    networks:
+      - appnet
+
+networks:
+  appnet:
+    driver: bridge
