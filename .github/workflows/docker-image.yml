@@ -28,4 +28,4 @@ jobs:
           file: ./Dockerfile
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: smallcat/my-ubuntu-m4:latest
+          tags: smallcat/my-ubuntu-m4:$(date +'%y%m%d')
