@@ -1,0 +1,11 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: mpi-hello-job
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: mpi-container
+        image: smallcat/my-ubuntu-m4:latest

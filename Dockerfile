@@ -29,7 +29,7 @@ RUN useradd -m -s /bin/bash smallcat && echo "smallcat ALL=(ALL) NOPASSWD:ALL" >
 USER smallcat
 WORKDIR /home/smallcat
 
-# test
+# test kubernetes
 COPY mpi-hello.c .
 RUN mpicc mpi-hello.c -o mpi-hello
 CMD ["mpirun", "-np", "2", "./mpi-hello"]
