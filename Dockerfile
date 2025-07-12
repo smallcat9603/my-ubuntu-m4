@@ -32,4 +32,5 @@ WORKDIR /home/smallcat
 # test kubernetes
 COPY mpi-hello.c .
 RUN mpicc mpi-hello.c -o mpi-hello
-CMD ["sleep", "infinity"]
+CMD ["mpirun", "-np", "2", "./mpi-hello"]
+# CMD ["sleep", "infinity"]
