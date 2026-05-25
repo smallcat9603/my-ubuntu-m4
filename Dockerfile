@@ -10,9 +10,11 @@ RUN apt-get update && apt-get install -y \
     iproute2 \
     dnsutils \
     vim \
+    ssh \
     less \
     htop \
     unzip \
+    automake \
     cmake \
     git \
     python3 \
@@ -24,6 +26,10 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     openmpi-bin \
     libopenmpi-dev \
+    ruby \
+    metis \
+    gnuplot \
+    npm \
     && rm -rf /var/lib/apt/lists/*
 
 RUN useradd -m -s /bin/bash smallcat && echo "smallcat ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
