@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y \
     less \
     htop \
     unzip \
+    cmake \
     git \
     python3 \
     python3-pip \
